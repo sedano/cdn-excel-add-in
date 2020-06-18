@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+      xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
+      <Id>45690190-d209-510a-8ad0-263b4aeb5b92</Id>
+      <Version>11.2.0200.1101</Version>
+      <ProviderName>MicroStrategy Inc.</ProviderName>
+      <DefaultLocale>en-US</DefaultLocale>
+      <DisplayName DefaultValue="env-190574 (11.2.1)"/>
+      <Description DefaultValue="New plugin to insert data from MicroStrategy into Microsoft Office products.">
+          <Override Locale="da-dk" Value="Nyt plugin til at indsætte data fra Microstrategy i Microsoft Office-produkter."/>
+          <Override Locale="de-de" Value="Neues Plug-in zur Datenübertragung aus Microstrategy in Microsoft-Office-Produkte."/>
+          <Override Locale="es-es" Value="Nuevo complemento para insertar datos de MicroStrategy en productos de Microsoft Office."/>
+          <Override Locale="fr-fr" Value="Nouveau plugin pour insérer des données depuis MicroStrategy vers des produits Microsoft Office."/>
+          <Override Locale="it-it" Value="Nuovo plugin per inserire dati da MicroStrategy nei prodotti MicroStrategy per Office."/>
+          <Override Locale="ja-jp" Value="MicrostrategyからMicrosoft Office製品にデータを挿入するための新しいプラグイン。"/>
+          <Override Locale="ko-kr" Value="Microstrategy에서 Microsoft Office 제품으로 데이터를 삽입하는 새 플러그인입니다."/>
+          <Override Locale="nl-nl" Value="Nieuwe plug-in om gegevens van Microstrategy in Microsoft Office-producten te voegen."/>
+          <Override Locale="pt-br" Value="Novo plugin para inserir dados do MicroStrategy em produtos Microsoft Office."/>
+          <Override Locale="sv-se" Value="Ny plugin för att infoga data från Microstrategy i Microsoft Office-produkter."/>
+          <Override Locale="zh-cn" Value="将数据从 MicroStrategy 插入到 Microsoft Office 产品的新插件。"/>
+          <Override Locale="zh-tw" Value="將資料從 Microstrategy 插入 Microsoft Office 產品的新外掛程式。"/>
+      </Description>
+      <IconUrl DefaultValue="https://env-190574.customer.cloud.microstrategy.com/MicroStrategyLibrary/static/loader-mstr-office/assets/mstr_logo_32.png" />
+      <HighResolutionIconUrl DefaultValue="https://env-190574.customer.cloud.microstrategy.com/MicroStrategyLibrary/static/loader-mstr-office/assets/mstr_logo_512.png"/>
+      <SupportUrl DefaultValue="https://www2.microstrategy.com/producthelp/Current/Office/WebHelp/Lang_1033/index.htm" />
+      
+      <Hosts>
+          <Host Name="Workbook" />
+      </Hosts>
+      <Requirements>
+        <Sets>
+          <Set Name="ExcelApi" MinVersion="1.4" />
+        </Sets>
+      </Requirements>
+      <DefaultSettings>
+          <SourceLocation DefaultValue="https://env-190574.customer.cloud.microstrategy.com/MicroStrategyLibrary/static/cdn/taskpane.html" />
+      </DefaultSettings>
+      <Permissions>ReadWriteDocument</Permissions>
+      <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+          <Hosts>
+              <Host xsi:type="Workbook">
+                  <DesktopFormFactor>
+                      <GetStarted>
+                          <Title resid="MSTR.GetStarted.Title"/>
+                          <Description resid="MSTR.GetStarted.Description" />
+                          <LearnMoreUrl resid="MSTR.GetStarted.LearnMoreUrl" />
+                      </GetStarted>
+                      <FunctionFile resid="MSTR.DesktopFunctionFile.Url" />
+                      <ExtensionPoint xsi:type="PrimaryCommandSurface">
+                          <OfficeTab id="TabHome">
+                              <Group id="MSTR.Group1">
+                                  <Label resid="MSTR.GroupMicroStrategy.Label" />
+                                  <Icon>
+                                      <bt:Image size="16" resid="MSTR.tpicon_16x16" />
+                                      <bt:Image size="32" resid="MSTR.tpicon_32x32" />
+                                      <bt:Image size="80" resid="MSTR.tpicon_80x80" />
+                                  </Icon>
+                                  <Control xsi:type="Button" id="MSTR.TaskpaneButton">
+                                      <Label resid="MSTR.TaskpaneButton.Label" />
+                                      <Supertip>
+                                          <Title resid="MSTR.TaskpaneButton.Label" />
+                                          <Description resid="MSTR.TaskpaneButton.Tooltip" />
+                                      </Supertip>
+                                      <Icon>
+                                          <bt:Image size="16" resid="MSTR.tpicon_16x16" />
+                                          <bt:Image size="32" resid="MSTR.tpicon_32x32" />
+                                          <bt:Image size="80" resid="MSTR.tpicon_80x80" />
+                                      </Icon>
+                                      <Action xsi:type="ShowTaskpane">
+                                          <TaskpaneId>TaskPaneMainButton</TaskpaneId>
+                                          <SourceLocation resid="MSTR.Taskpane.Url" />
+                                      </Action>
+                                  </Control>
+                              </Group>
+                          </OfficeTab>
+                      </ExtensionPoint>
+                  </DesktopFormFactor>
+              </Host>
+          </Hosts>
+          <Resources>
+              <bt:Images>
+                  <bt:Image id="MSTR.tpicon_16x16" DefaultValue="https://env-190574.customer.cloud.microstrategy.com/MicroStrategyLibrary/static/loader-mstr-office/assets/mstr_logo_16.png" />
+                  <bt:Image id="MSTR.tpicon_32x32" DefaultValue="https://env-190574.customer.cloud.microstrategy.com/MicroStrategyLibrary/static/loader-mstr-office/assets/mstr_logo_32.png" />
+                  <bt:Image id="MSTR.tpicon_80x80" DefaultValue="https://env-190574.customer.cloud.microstrategy.com/MicroStrategyLibrary/static/loader-mstr-office/assets/mstr_logo_80.png" />
+              </bt:Images>
+              <bt:Urls>
+                  <bt:Url id="MSTR.Taskpane.Url" DefaultValue="https://env-190574.customer.cloud.microstrategy.com/MicroStrategyLibrary/static/cdn/taskpane.html" />
+                  <bt:Url id="MSTR.GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812" />
+                  <bt:Url id="MSTR.DesktopFunctionFile.Url" DefaultValue="https://env-190574.customer.cloud.microstrategy.com/MicroStrategyLibrary/static/loader-mstr-office/function-file/function-file.html" />
+              </bt:Urls>
+              <bt:ShortStrings>
+                  <bt:String id="MSTR.TaskpaneButton.Label" DefaultValue="env-190574 cdn"/>
+                  <bt:String id="MSTR.GroupMicroStrategy.Label" DefaultValue="MicroStrategy" />
+                  <bt:String id="MSTR.GetStarted.Title" DefaultValue="env-190574 cdn"/>
+                  <bt:String id="MSTR.OfficeTab.Label" DefaultValue="MicroStrategy" />
+              </bt:ShortStrings>
+              <bt:LongStrings>
+                  <bt:String id="MSTR.TaskpaneButton.Tooltip" DefaultValue="Click to Show a Taskpane">
+                      <bt:Override Locale="da-dk" Value="Klik for at vise et opgavepanel"/>
+                      <bt:Override Locale="de-de" Value="Hier klicken, um Aufgabenbereich anzuzeigen"/>
+                      <bt:Override Locale="es-es" Value="Haga clic para mostrar un panel de tareas"/>
+                      <bt:Override Locale="fr-fr" Value="Cliquez pour afficher un volet de tâches"/>
+                      <bt:Override Locale="it-it" Value="Fare clic per mostrare un riquadro attività"/>
+                      <bt:Override Locale="ja-jp" Value="[Show a Taskpane]をクリック"/>
+                      <bt:Override Locale="ko-kr" Value="클릭하여 작업창 표시"/>
+                      <bt:Override Locale="nl-nl" Value="Klik om een taakvenster weer te geven"/>
+                      <bt:Override Locale="pt-br" Value="Clique para mostrar um painel de tarefas"/>
+                      <bt:Override Locale="sv-se" Value="Klicka för att visa ett åtgärdsfönster"/>
+                      <bt:Override Locale="zh-cn" Value="单击以显示任务窗格"/>
+                      <bt:Override Locale="zh-tw" Value="按一下以顯示一個 Taskpane"/>
+                  </bt:String>
+                  <bt:String id="MSTR.GetStarted.Description" DefaultValue="env-190574 (11.2.1)"/>
+              </bt:LongStrings>
+          </Resources>
+      </VersionOverrides>
+  </OfficeApp>
+  
